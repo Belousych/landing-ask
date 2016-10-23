@@ -60,7 +60,7 @@ var config = {
 	server: {
 		baseDir: "./build"
 	},
-	tunnel: true,
+//	tunnel: true,
 	host: 'localhost',
 	port: 9000,
 	logPrefix: "Frontend"
@@ -99,9 +99,9 @@ gulp.task('style:build', function () {
 		}))
 		.pipe(sourcemaps.init()) //То же самое что и с js
 		.pipe(less()) //Скомпилируем
-		.pipe(prefixer({
-			browsers: ['last 2 versions']
-		})) //Добавим вендорные префиксы
+//		.pipe(prefixer({
+//			browsers: ['last 2 versions']
+//		})) //Добавим вендорные префиксы
 		.pipe(cssmin()) //Сожмем
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest(path.build.css)) //И в build

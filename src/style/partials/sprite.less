@@ -11,33 +11,55 @@ The large array-like variables contain all information about a single icon
 At the bottom of this section, we provide information about the spritesheet itself
 @spritesheet: width height image @spritesheet-sprites;
 */
-@s-phone-name: 's-Phone';
-@s-phone-x: 0px;
-@s-phone-y: 0px;
-@s-phone-offset-x: 0px;
-@s-phone-offset-y: 0px;
-@s-phone-width: 512px;
-@s-phone-height: 512px;
-@s-phone-total-width: 1024px;
-@s-phone-total-height: 512px;
-@s-phone-image: 'sprite.png';
-@s-phone: 0px 0px 0px 0px 512px 512px 1024px 512px 'sprite.png' 's-Phone';
-@s-usb-name: 's-usb';
-@s-usb-x: 512px;
-@s-usb-y: 0px;
-@s-usb-offset-x: -512px;
-@s-usb-offset-y: 0px;
-@s-usb-width: 512px;
-@s-usb-height: 512px;
-@s-usb-total-width: 1024px;
-@s-usb-total-height: 512px;
-@s-usb-image: 'sprite.png';
-@s-usb: 512px 0px -512px 0px 512px 512px 1024px 512px 'sprite.png' 's-usb';
-@spritesheet-width: 1024px;
-@spritesheet-height: 512px;
-@spritesheet-image: 'sprite.png';
-@spritesheet-sprites: @s-phone @s-usb;
-@spritesheet: 1024px 512px 'sprite.png' @spritesheet-sprites;
+@sprite-i-brik-name: 'sprite-i-brik';
+@sprite-i-brik-x: 0px;
+@sprite-i-brik-y: 0px;
+@sprite-i-brik-offset-x: 0px;
+@sprite-i-brik-offset-y: 0px;
+@sprite-i-brik-width: 70px;
+@sprite-i-brik-height: 46px;
+@sprite-i-brik-total-width: 128px;
+@sprite-i-brik-total-height: 101px;
+@sprite-i-brik-image: '/img/sprite.png';
+@sprite-i-brik: 0px 0px 0px 0px 70px 46px 128px 101px '/img/sprite.png' 'sprite-i-brik';
+@sprite-i-geo-name: 'sprite-i-geo';
+@sprite-i-geo-x: 0px;
+@sprite-i-geo-y: 46px;
+@sprite-i-geo-offset-x: 0px;
+@sprite-i-geo-offset-y: -46px;
+@sprite-i-geo-width: 40px;
+@sprite-i-geo-height: 55px;
+@sprite-i-geo-total-width: 128px;
+@sprite-i-geo-total-height: 101px;
+@sprite-i-geo-image: '/img/sprite.png';
+@sprite-i-geo: 0px 46px 0px -46px 40px 55px 128px 101px '/img/sprite.png' 'sprite-i-geo';
+@sprite-i-phone-name: 'sprite-i-phone';
+@sprite-i-phone-x: 40px;
+@sprite-i-phone-y: 46px;
+@sprite-i-phone-offset-x: -40px;
+@sprite-i-phone-offset-y: -46px;
+@sprite-i-phone-width: 26px;
+@sprite-i-phone-height: 25px;
+@sprite-i-phone-total-width: 128px;
+@sprite-i-phone-total-height: 101px;
+@sprite-i-phone-image: '/img/sprite.png';
+@sprite-i-phone: 40px 46px -40px -46px 26px 25px 128px 101px '/img/sprite.png' 'sprite-i-phone';
+@sprite-i-rep-name: 'sprite-i-rep';
+@sprite-i-rep-x: 70px;
+@sprite-i-rep-y: 0px;
+@sprite-i-rep-offset-x: -70px;
+@sprite-i-rep-offset-y: 0px;
+@sprite-i-rep-width: 58px;
+@sprite-i-rep-height: 43px;
+@sprite-i-rep-total-width: 128px;
+@sprite-i-rep-total-height: 101px;
+@sprite-i-rep-image: '/img/sprite.png';
+@sprite-i-rep: 70px 0px -70px 0px 58px 43px 128px 101px '/img/sprite.png' 'sprite-i-rep';
+@spritesheet-width: 128px;
+@spritesheet-height: 101px;
+@spritesheet-image: '/img/sprite.png';
+@spritesheet-sprites: @sprite-i-brik @sprite-i-geo @sprite-i-phone @sprite-i-rep;
+@spritesheet: 128px 101px '/img/sprite.png' @spritesheet-sprites;
 
 /*
 The provided classes are intended to be used with the array-like variables
@@ -48,6 +70,21 @@ The provided classes are intended to be used with the array-like variables
 .icon-email {
   .sprite(@icon-email);
 }
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
 */
 .sprite-width(@sprite) {
   width: extract(@sprite, 5);

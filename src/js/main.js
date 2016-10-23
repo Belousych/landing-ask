@@ -4,8 +4,8 @@
 //= ../../bower_components/modernizr/modernizr.js
 //= ../../bower_components/jquery/dist/jquery.js
 //= ../../bower_components/uikit/js/uikit.js
-
-
+//= ../../bower_components/uikit/js/components/slideshow.js
+//= ../../bower_components/uikit/js/components/lightbox.js
 /*
  * Custom
  */

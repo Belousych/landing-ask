@@ -1,3 +1,22 @@
 .header {
-    
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    background: #fff;
+    padding: 20px 0;
+    font-size: 18px;
+    &__right {
+        text-align: right;
+    }
+    &__left, &__right, &__center {
+        padding: 5px 0;
+    }
+    .phone {
+        font-size: 25px;
+    }
+}
+
+.phone {
+    a[href^="tel:"] {
+        color: inherit !important;
+        text-decoration: none !important;
+    }
 }

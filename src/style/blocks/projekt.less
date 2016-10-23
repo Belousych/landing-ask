@@ -1,0 +1,69 @@
+.projekt {
+    padding-bottom: 40px;
+    &__title {
+        color: #fff;
+        background: #89b01e;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 47px;
+        padding: 45px 0;
+        line-height: normal;
+        margin-bottom: 50px;
+    }
+    .clearfix;
+    &__list {
+        margin-bottom: 40px;
+    }
+}
+.projekt-item {
+    .clearfix;
+    margin: 20px 0;
+    padding: 30px;
+    background: #fff;
+    font-size: 14px;
+    &__name {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+    &__left {
+
+    }
+    &__price {
+        font-size: 18px;
+    }
+    &__price-summ {
+        color: #89b01e;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .projekt-img {
+        &__big {
+            overflow: hidden;
+        }
+        &__right {
+            margin-left: 40px;
+            a {
+                display: block;
+                border: 1px solid #ababab;
+                width: 58px;
+                height: 58px;
+                position: relative;
+                margin-top:20px;
+                overflow: hidden;
+                &:first-child {
+                    margin-top: 0;
+                }
+                img {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    margin: auto;
+
+                }
+            }
+        }
+    }
+}
